@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+<!-- MULTIPLICATION-->
+<category>
+<pattern>
+XMUL <set>number</set> XS 0
+</pattern>
+<template>0
+</template>
+</category>
+
+<category>
+<pattern>
+XMUL <set>number</set> XS <set>number</set>
+</pattern>
+<template><srai>XADD <star index="1" /> XS <srai>XMUL <star index="1" /> XS <map name="predecessor"><star index="2" /></map></srai></srai>
+</template>
+</category>
+    
+</aiml>

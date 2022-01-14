@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	
+	<category>
+	    <pattern><set>welkomen</set></pattern>
+	    <template>
+	        <delay>3</delay>
+	        <image>https://i.postimg.cc/d02qBC0g/2uedihqq1elrq5mriifa-ogo-boba-boy-1.jpg</image>
+	        Halo, Selamat datang di BobaBoy. Tugas saya memberi informasi tentang menu di BobaBoy dan membantu Anda untuk memesan minuman yang tersedia.<split/>
+	        Apa yang bisa saya bantu?
+	        <reply>
+	            <text>Saya ingin pesan sekarang</text>
+	            <postback>ordernow</postback>
+            </reply>
+            <reply>
+                <text>saya ingin lihat menu</text>
+                <postback>seemenu</postback>
+            </reply>
+	    </template>
+    </category>
+    <!--tidak jadi pesan atau kembali-->
+    <category>
+        <pattern>tidakpesan</pattern>
+        <template>
+	        <delay>3</delay>
+	        Halo, Selamat datang di BobaBoy. Tugas saya memberi informasi tentang menu di BobaBoy dan membantu Anda untuk memesan minuman yang tersedia.<split/>
+	        Apa yang bisa saya bantu?
+	        <reply>
+	            <text>Saya ingin pesan sekarang</text>
+	            <postback>ordernow</postback>
+            </reply>
+            <reply>
+                <text>saya ingin lihat menu</text>
+                <postback>seemenu</postback>
+            </reply>
+	    </template>
+    </category>
+    
+    
+    
+    
+    
+    
+    <!-- not understand -->
+    <category>
+        <pattern>*</pattern>
+        <template>Master belum mengajari saya kata tersebut😓.</template>
+    </category>
+</aiml>

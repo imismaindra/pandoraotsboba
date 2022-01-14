@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- pembayaran -->
+	
+	
+	<category>
+	    <pattern>paymentovo</pattern>
+	    <template><delay>3</delay>
+	        Silahkan scan QR Code ini dan proses pembayarannya.<split/>
+	        <image>https://i.postimg.cc/QMX2ph8s/Dttq8-EEUUAAhv-I.jpg</image>
+	        Terima kasih atas pesanan Anda. Petugas kami akan segera menyiapkan dan mengirim pesanan Anda. Selamat menikmati.<split/><delay>3</delay>
+	        <image>https://64.media.tumblr.com/bd1c328c18bcc2965a8142d1aa3dec0a/tumblr_ngdea3ts441ttj3v1o1_1280.gifv</image>
+	    </template>
+    </category>
+	<category>
+	    <pattern>paymentcod</pattern>
+	    <template><delay>3</delay>
+	         Terima kasih atas pesanan Anda.Mohon siapkan uang pas. Petugas kami akan segera menyiapkan dan mengirim pesanan Anda<split/><delay>3</delay>
+	        <image>https://www.getillustrations.com/photos/pack/video/9913d-delivery-man-zima-blue-illustration.gif</image><split/>
+	        <image>https://64.media.tumblr.com/bd1c328c18bcc2965a8142d1aa3dec0a/tumblr_ngdea3ts441ttj3v1o1_1280.gifv</image>
+	    </template>
+    </category>
+	
+	<category>
+	    <pattern>paymentgopay</pattern>
+	    <template><delay>3</delay>
+	        Silahkan scan QR Code ini dan proses pembayarannya.<split/>
+	        <image>https://i.postimg.cc/zGD77Bgd/qr.jpg</image>
+	        Terima kasih atas pesanan Anda. Petugas kami akan segera menyiapkan dan mengirim pesanan Anda. Selamat menikmati.<split/><delay>3</delay>
+	        <image>https://64.media.tumblr.com/bd1c328c18bcc2965a8142d1aa3dec0a/tumblr_ngdea3ts441ttj3v1o1_1280.gifv</image>
+	    </template>
+    </category>
+    
+    
+    
+    
+</aiml>

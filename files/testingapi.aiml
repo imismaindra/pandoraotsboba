@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<!-- insert your AIML categories here -->
+	
+	<category>
+      <pattern>TEMP *</pattern>
+      <template>
+        <think>
+          <set var="tempresp">
+              <callapi response_code_var="tempcode">
+                <url>http://api.openweathermap.org/data/2.5/weather</url>
+                <query name="q"><star /></query>
+                <query name="APPID"><secret name="wkey" /></query>
+                <query name="mode">xml</query>
+                <query name="units">imperial</query>
+              </callapi>
+            </set>
+          </think>
+        <condition var="tempcode">
+          <li value="200"><get var="tempresp" /><xpath>/current/temperature/@value</xpath></li>
+          <li><srai>TEMPFAIL</srai></li>
+        </condition>
+      </template>
+    </category>
+	
+	<callapi response_code_var="response_code">
+        <url>http://api.coindesk.com/v1/bpi/currentprice.json</url>
+    </callapi>
+    
+    <category>
+        <pattern>tes api</pattern>
+        <template><get api="response_code"/></template>
+    </category>
+    
+    <category>
+  <pattern>WHAT IS THE PRICE OF BTC</pattern>
+    <template>
+        <think>
+            <set var="response">
+                <callapi response_code_var="response_code">
+                <url>http://api.coindesk.com/v1/bpi/currentprice.json</url></callapi>
+            </set>
+            <set var="content">
+                <jsonpath>
+                    <path>$.bpi.USD.rate</path>
+                    <get var="response" />
+                </jsonpath>
+            </set>
+        </think>
+        <condition var="response_code">
+            <li value="200"><get var="content" /></li>
+            <li>Could not get the price.</li>
+        </condition>
+    </template>
+</category>
+</aiml>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- Lihat menu -->
+	<category>
+	    <pattern>seemenu</pattern>
+	    <template>
+	        <delay>3</delay>
+	        Daftar menu BobaBoy:
+            <carousel>
+                <card>
+                    <image>https://i.postimg.cc/76vd6tM2/kzbszr7cham8rbowbx0k-boba-milk-1.jpg</image>
+                    <title>Boba Milk 18.000</title>
+                    <subtitle>Minuman rasa susu yang diberi mutiara(boba)</subtitle>
+                </card>
+                <card>
+                    <image>https://i.postimg.cc/FsdJf13v/6pwgrcfozyelll16iy9f-salted-caramel-1.jpg</image>
+                    <title>Salted Caramel 22.000</title>
+                    <subtitle>Minuman boba dengan rasa caramel vang diberi sedikit garam</subtitle>
+                </card>
+                <card>
+                    <image>https://i.postimg.cc/RCLySR3W/xasu1r6w1aashazcgmmy-regally-blonde.jpg</image>
+                    <title>Regally Blonde 20.0000</title>
+                    <subtitle>Minuman boba dengan rasa caramel vang diberi sedikit garam</subtitle>
+                </card>
+                <card>
+                    <image>https://i.postimg.cc/SshYPzQ4/jlmc1qxnh7ghqwvle48m-uji-matcha.jpg</image>
+                    <title>Uji Matcha 25.000</title>
+                    <subtitle>Minuman boba dengan rasa teh matcha</subtitle>
+                </card>
+                <card>
+                    <image>https://i.postimg.cc/cHPxzpBn/hoxq8lvacvks0g4kmozc-taro-love-boba.jpg</image>
+                    <title>Taro Love18.000</title>
+                    <subtitle>Minuman boba dengan mix rasa taro dan buah</subtitle>
+                </card>
+                 <card>
+                    <image>https://i.postimg.cc/vH3jHWCP/ogxs1u7gp5lfoyv6m4k6-red-velveet.jpg</image>
+                    <title>Red Velvet 28.000</title>
+                    <subtitle>minuman yang dibuat dari bubuk kakao, kopi, cuka dan diberi boba</subtitle>
+                </card>
+                <card>
+                    <image>https://i.postimg.cc/GpDgZJwh/7bg8ejxcdh0q7vk3jbvo-kopi-susu.jpg</image>
+                    <title>Kopi Susu 15.000</title>
+                    <subtitle>minuman boba dengan rasa kopi</subtitle>
+                </card>
+                <card>
+                    <image>https://i.postimg.cc/dVb4mkkM/v2yl67gaf3037la3nawq-dark-chocho.jpg</image>
+                    <title>Dark Choco 18.000</title>
+                    <subtitle>minuman boba dengan rasa coklat yang pekat</subtitle>
+                </card>
+                <card>
+                    <image>https://i.postimg.cc/wMMXdgyc/4nmmmqhe1nxmgof4iccc-milk-shake.jpg</image>
+                    <title>Milk Shake 22.000</title>
+                    <subtitle>minuman boba dengan rasa susu kocok</subtitle>
+                </card>
+                
+            </carousel>
+            <delay>2</delay>
+
+            Apakah Anda ingin pesan sekarang?
+            <reply>
+                <text>Ya, saya ingin pesan sekarang</text>
+                <postback>ordernow</postback>
+            </reply>
+             <reply>
+                <text>Tidak</text>
+                <postback>tidakpesan</postback>
+            </reply>
+	    
+	    </template>
+    </category>
+	
+	
+</aiml>

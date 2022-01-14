@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<!-- insert your AIML categories here -->
+	
+<category>
+    <pattern>WEATHER *</pattern>
+    <template>
+        <think>
+            <set name="weather_response">
+                 <callapi response_code_var="weather_response_status">
+                     <url>http://api.openweathermap.org/data/2.5/weather</url>
+                     <method>GET</method>
+                     <query name="q"><star/></query>
+                     <query name="APPID"><secret name="weather secret opikey"/></query>
+                     <query name="units">metrice</query>
+                     <filter type="jsonpatn">$.weather[0].description</filter>
+                 </callapi>
+            </set>
+        </think>
+        <condition var="weather_response_status">
+            <li value="200"><get name="weather_response"/></li>
+            <li value="404">Sorry but I have never heard of a city called <star/>.</li>
+            <li>ERROR</li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>CHECK STOK</pattern>
+    <template>
+        <callapi>
+            <url>http://www.square-bear.co.uk/temp/stock.txt</url>
+        </callapi>
+    </template>
+</category>
+</aiml>

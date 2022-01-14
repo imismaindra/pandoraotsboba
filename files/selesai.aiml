@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->s
+	<category>
+	    <pattern>selesai</pattern>
+	    <template>
+	        <delay>3</delay>
+            Silahkan cek pesanan Anda:<br/>
+            Tanggal Order: <date locale="id_ID" format="%A, %d %B %Y" /> <br/>
+            Atas Nama: <get name="namapelanggan"/><br/>
+            Nomor Telepon: <get name="notelepon"/> <br/>
+            Alamat: <get name="alamat"/> <br/>
+            Detail Pesanan: <br/><get name="boba"/><br/><get name="boba2"/><split/>
+            <delay>3</delay>
+            Silahkan pilih cara pembayaran:<br/>
+            <button>
+                <text>GoPay</text>
+                <postback>paymentgopay</postback>
+            </button>
+            <button>
+                <text>OVO</text>
+                <postback>paymentovo</postback>
+            </button>
+            <button>
+                <text>COD</text>
+                <postback>paymentcod</postback>
+            </button>
+            <button>
+                <text>Batalkan pesanan</text>
+                <postback>tidakpesan</postback>
+            </button>
+            
+	    </template>
+    </category>
+</aiml>
